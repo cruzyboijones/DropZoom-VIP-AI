@@ -12,7 +12,11 @@ self.addEventListener('install', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(res => res || fetch(e.request))
+    caches.match(e.request).then(res => {
+      return res || fetch(e.request).catch(() => {
+        // Optionally, return offline.html or a fallback here
+        return new Response('<h1>Offline or file not found.</h1>', { headers: { 'Content-Type': 'text/html' } });
+      });
+    })
   );
 });
-
