@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DropZoom AI - Study Helper</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <h1>DropZoom AI</h1>
+  <p>Your study partner with AI tools and educational apps.</p>
+
+  <button onclick="location.href='ai-helper.html'">🧠 Use AI Homework Helper</button>
+  <button onclick="location.href='explore.html'">🎮 Explore Tools & Games</button>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
 
