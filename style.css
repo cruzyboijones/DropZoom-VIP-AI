@@ -1,1 +1,27 @@
-
+body {
+  font-family: Arial, sans-serif;
+  margin: 2em;
+  background: #f9f9f9;
+  color: #222;
+}
+h1, h2 {
+  color: #2196f3;
+}
+button {
+  margin: 1em 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+button:hover {
+  background: #1976d2;
+}
+input[type="text"] {
+  padding: 0.5em;
+  font-size: 1em;
+  margin-right: 0.5em;
+}
