@@ -8,20 +8,10 @@
       const responseDiv = document.getElementById('response');
       responseDiv.textContent = 'Thinking...';
 
-      const res = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": "Bearer YOUR_API_KEY_HERE",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "gpt-3.5-turbo",
-          messages: [{ role: "user", content: question }]
-        })
-      });
-
-      const data = await res.json();
-      responseDiv.textContent = data.choices[0].message.content;
+      // This will not work without a backend! Show a friendly error:
+      responseDiv.textContent = "Sorry, the AI helper isn't available yet. Ask Cruze to set up the backend API!";
+      // Example backend endpoint:
+      // const res = await fetch("/api/ai", { ... });
     }
   </script>
 </head>
@@ -32,4 +22,3 @@
   <p id="response"></p>
 </body>
 </html>
-
